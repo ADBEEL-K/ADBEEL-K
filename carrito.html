@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      .contenedor {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .producto {
+        display: inline-block;
+        width: 30%; /* Ajusta el ancho según sea necesario */
+        margin: 1.5%;
+        padding: 15px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        vertical-align: top; /* Alineación vertical */
+      }
+      .producto img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .nombre {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      .precio {
+        color: green;
+        font-size: 1.1em;
+      }
+      .boton {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        position: relative;
+      }
+      .boton:hover {
+        transform: scale(1.02);
+        background-color: #0056b3;
+      }
+      .tooltip {
+        display: none;
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+      }
+      .boton:hover .tooltip {
+        display: block;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="producto">
+        <img src="pb.jpg" alt="Producto 1" />
+        <div class="nombre">20 000 mAh Mi 50W Power Bank </div>
+        <div class="precio">$10.00</div>
+        <a href="#" class="boton">
+          Agregar al Carrito
+          <div class="tooltip">Carga rápida máx. de 50 W | Salida de tres puertos ORIGINAL SELLADO.</div>
+        </a>
+      </div>
+      <div class="producto">
+        <img src="ab.jpg" alt="Producto 2" />
+        <div class="nombre">Audífono Inalámbrico F9 </div>
+        <div class="precio">$15.00</div>
+        <a href="#" class="boton">
+          Agregar al Carrito
+          <div class="tooltip">Audífonos F9 en buen estado, con sonido de calidad y contestador de llamadas.</div>
+        </a>
+      </div>
+      <div class="producto">
+        <img src="repw.jpg" alt="Producto 3" />
+        <div class="nombre">REPETIDOR WIFI </div>
+        <div class="precio">$20.00</div>
+        <a href="#" class="boton">
+          Agregar al Carrito
+          <div class="tooltip">KNUP ROMPE MUROS.</div>
+        </a>
+      </div>
+      <div class="producto">
+        <img src="j7.jpg" alt="Producto 4" />
+        <div class="nombre">J7 prime 2 de 32/3 </div>
+        <div class="precio">$25.00</div>
+        <a href="#" class="boton">
+          Agregar al Carrito
+          <div class="tooltip">Estado físico 9 de 10 solo un poco de desgaste en la tapa.</div>
+        </a>
+      </div>
+      <div class="producto">
+        <img src="rc.jpg" alt="Producto 5" />
+        <div class="nombre">Reloj CELULAR X9 </div>
+        <div class="precio">$30.00</div>
+        <a href="#" class="boton">
+          Agregar al Carrito
+          <div class="tooltip">llamadas, Tarjeta SIM Amoled ⌚📢 SMARTWATCH X9 Ultra 4G – CON CHIP, YOUTUBE, PLAY STO.</div>
+        </a>
+      </div>
+      <div class="producto">
+        <img src="tele.jpg" alt="Producto 6" />
+        <div class="nombre">TV LG </div>
+        <div class="precio">$35.00</div>
+        <a href="#" class="boton">
+          Agregar al Carrito
+          <div class="tooltip">21 pulgadas.</div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
