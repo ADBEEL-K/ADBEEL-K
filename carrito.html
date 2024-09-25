@@ -4,54 +4,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        font-family: 'Roboto', sans-serif;
+        background-color: #e9ecef;
         padding: 20px;
+      }
+      /* Estilos para la navegación */
+      nav {
+        background-color: #007bff; /* Color del fondo del nav */
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around; /* Espacio entre los elementos */
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: white; /* Color del texto */
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        text-decoration: underline; /* Subrayar al pasar el ratón */
       }
       .contenedor {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Espacio entre los productos */
       }
       .producto {
         display: inline-block;
-        width: 30%; /* Ajusta el ancho según sea necesario */
+        width: 22%; /* Cambié el ancho para 4 productos por fila */
         margin: 1.5%;
         padding: 15px;
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         vertical-align: top; /* Alineación vertical */
+        transition: transform 0.2s;
+      }
+      .producto:hover {
+        transform: scale(1.05);
       }
       .producto img {
         max-width: 100%;
         height: auto;
-        border-radius: 5px;
+        border-radius: 10px;
       }
       .nombre {
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin: 10px 0;
+        color: #343a40; /* Color del texto */
       }
       .precio {
-        color: green;
-        font-size: 1.1em;
+        color: #28a745; /* Color verde */
+        font-size: 1.2em;
+        font-weight: bold;
       }
       .boton {
         display: inline-block;
         margin-top: 10px;
         padding: 10px 15px;
-        background-color: #007bff;
+        background-color: #17a2b8; /* Color del botón */
         color: white;
         text-decoration: none;
         border-radius: 5px;
         position: relative;
+        transition: background-color 0.3s;
       }
       .boton:hover {
-        transform: scale(1.02);
-        background-color: #0056b3;
+        background-color: #138496; /* Color al pasar el mouse */
       }
       .tooltip {
         display: none;
@@ -59,7 +93,7 @@
         bottom: 120%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #333;
+        background-color: #343a40; /* Color del tooltip */
         color: white;
         padding: 5px;
         border-radius: 5px;
@@ -77,23 +111,31 @@
     </style>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Carrito</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
     <div class="contenedor">
       <div class="producto">
         <img src="pb.jpg" alt="Producto 1" />
-        <div class="nombre">20 000 mAh Mi 50W Power Bank </div>
+        <div class="nombre">20 000 mAh Mi 50W </div>
         <div class="precio">$10.00</div>
         <a href="#" class="boton">
           Agregar al Carrito
-          <div class="tooltip">Carga rápida máx. de 50 W | Salida de tres puertos ORIGINAL SELLADO.</div>
+          <div class="tooltip">Power Bank Carga rápida máx. de 50 W | Salida de tres puertos ORIGINAL SELLADO.</div>
         </a>
       </div>
       <div class="producto">
         <img src="ab.jpg" alt="Producto 2" />
-        <div class="nombre">Audífono Inalámbrico F9 </div>
+        <div class="nombre">Audífono Inalámbrico .</div>
         <div class="precio">$15.00</div>
         <a href="#" class="boton">
           Agregar al Carrito
-          <div class="tooltip">Audífonos F9 en buen estado, con sonido de calidad y contestador de llamadas.</div>
+          <div class="tooltip">F9 Audífonos F9 en buen estado, con sonido de calidad y contestador de llamadas.</div>
         </a>
       </div>
       <div class="producto">
@@ -120,16 +162,16 @@
         <div class="precio">$30.00</div>
         <a href="#" class="boton">
           Agregar al Carrito
-          <div class="tooltip">llamadas, Tarjeta SIM Amoled ⌚📢 SMARTWATCH X9 Ultra 4G – CON CHIP, YOUTUBE, PLAY STO.</div>
+          <div class="tooltip">Tarjeta SIM Amoled ⌚📢 SMARTWATCH X9 Ultra 4G – CON CHIP, YOUTUBE, PLAY STO.</div>
         </a>
       </div>
       <div class="producto">
         <img src="tele.jpg" alt="Producto 6" />
-        <div class="nombre">TV LG </div>
+        <div class="nombre">TV LG 21 pulgadas</div>
         <div class="precio">$35.00</div>
         <a href="#" class="boton">
           Agregar al Carrito
-          <div class="tooltip">21 pulgadas.</div>
+          <div class="tooltip">Este producto será añadido a tu carrito de compras.</div>
         </a>
       </div>
     </div>
